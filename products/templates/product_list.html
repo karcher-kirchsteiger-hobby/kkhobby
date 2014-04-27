@@ -1,0 +1,13 @@
+<h1>Produkter</ht>
+<ul>
+{% for product in products.all %}
+    <li>{{ product.title }}<br/>
+    {% for tag in product.tags.all %}
+    {{ tag.title }}&nbsp;
+    {% endfor %}
+    
+    </li>
+    
+{% endfor %}
+</ul>
+
